@@ -1,4 +1,3 @@
-
 const About = () => {
   return (
     <section id="about" className="section-padding bg-background">
@@ -47,7 +46,7 @@ const About = () => {
             <div className="relative">
               <div className="bg-secondary/30 p-12 rounded-sm">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop&crop=face"
+                  src="/My_Image.jpeg"
                   alt="Daniel Aharon"
                   className="w-full max-w-sm mx-auto rounded-sm shadow-xl grayscale hover:grayscale-0 transition-all duration-500"
                 />

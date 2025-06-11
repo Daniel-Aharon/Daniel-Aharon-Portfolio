@@ -1,43 +1,44 @@
-
 import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
     {
-      title: "Multi-Tier AWS Infrastructure",
-      description: "Designed and deployed a scalable 3-tier architecture on AWS using Terraform, featuring Auto Scaling, Load Balancers, and RDS with automated backup strategies.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
-      technologies: ["AWS", "Terraform", "EC2", "RDS", "CloudWatch"],
-      githubUrl: "https://github.com/Daniel-Aharon/aws-infrastructure",
+      title: "Chat Bot Application",
+      description:
+        "A full-stack chat application with a React frontend and FastAPI backend, containerized using Docker. The project features a modern chat interface, real-time messaging via WebSockets, and robust CI/CD with GitHub Actions. Easily deployable with Docker Compose, it demonstrates cloud-native development and infrastructure automation.",
+      image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&h=400&fit=crop",
+      technologies: [
+        "React",
+        "FastAPI",
+        "Docker",
+        "Docker Compose",
+        "GitHub Actions",
+        "WebSockets",
+        "Nginx",
+        "Python"
+      ],
+      githubUrl: "https://github.com/Daniel-Aharon/Chat-Bot",
       liveUrl: "#",
-      category: "Infrastructure"
+      category: "Full Stack"
     },
     {
-      title: "Containerized Microservices Platform",
-      description: "Built a complete microservices deployment pipeline using Docker, Kubernetes, and Helm charts with integrated monitoring and logging solutions.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
-      technologies: ["Docker", "Kubernetes", "Helm", "Prometheus", "Grafana"],
-      githubUrl: "https://github.com/Daniel-Aharon/k8s-microservices",
+      title: "Scalable Web App Deployment with Docker & AWS",
+      description:
+        "A Dockerized Python Flask application with automated CI/CD pipelines using GitHub Actions. The project demonstrates building, testing, and deploying a web app to DockerHub and AWS EC2, with infrastructure managed via Terraform and integrated monitoring solutions.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
+      technologies: [
+        "Python",
+        "Flask",
+        "Docker",
+        "AWS EC2",
+        "Terraform",
+        "GitHub Actions",
+        "DockerHub",
+        "Monitoring"
+      ],
+      githubUrl: "https://github.com/Daniel-Aharon/Scalable-Web-App-Deployment-with-Docker-and-AWS",
       liveUrl: "#",
-      category: "Containerization"
-    },
-    {
-      title: "CI/CD Pipeline Automation",
-      description: "Implemented comprehensive CI/CD pipelines using GitHub Actions with automated testing, security scanning, and multi-environment deployments.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
-      technologies: ["GitHub Actions", "Jest", "SonarQube", "AWS", "Docker"],
-      githubUrl: "https://github.com/Daniel-Aharon/cicd-pipeline",
-      liveUrl: "#",
-      category: "CI/CD"
-    },
-    {
-      title: "Infrastructure Monitoring Stack",
-      description: "Deployed comprehensive monitoring solution with Prometheus, Grafana, and ELK stack for real-time infrastructure and application monitoring.",
-      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=600&h=400&fit=crop",
-      technologies: ["Prometheus", "Grafana", "Elasticsearch", "Kibana", "Logstash"],
-      githubUrl: "https://github.com/Daniel-Aharon/monitoring-stack",
-      liveUrl: "#",
-      category: "Monitoring"
+      category: "CI/CD & Cloud"
     }
   ];
 

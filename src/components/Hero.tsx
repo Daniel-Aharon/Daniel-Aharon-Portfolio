@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
@@ -32,18 +31,21 @@ const Hero = () => {
             <a href="#contact" className="btn-secondary">
               Contact
             </a>
+            <a href="/Daniel%20Aharon-Resume.pdf" download className="btn-secondary">
+              Download CV
+            </a>
           </div>
 
           <div className="flex justify-center gap-8 mb-16">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+            <a href="https://github.com/Daniel-Aharon" target="_blank" rel="noopener noreferrer" 
                className="p-4 hover:bg-secondary rounded-sm transition-all duration-300 group">
               <Github className="w-6 h-6 group-hover:text-primary transition-colors" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+            <a href="https://linkedin.com/in/daniel-aharon5" target="_blank" rel="noopener noreferrer"
                className="p-4 hover:bg-secondary rounded-sm transition-all duration-300 group">
               <Linkedin className="w-6 h-6 group-hover:text-primary transition-colors" />
             </a>
-            <a href="mailto:daniel.aharon@example.com"
+            <a href="mailto:danielaharon53@gmail.com"
                className="p-4 hover:bg-secondary rounded-sm transition-all duration-300 group">
               <Mail className="w-6 h-6 group-hover:text-primary transition-colors" />
             </a>

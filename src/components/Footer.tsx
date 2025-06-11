@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
@@ -22,7 +21,7 @@ const Footer = () => {
                 <Github size={24} />
               </a>
               <a
-                href="https://linkedin.com/in/daniel-aharon"
+                href="https://linkedin.com/in/daniel-aharon5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -30,7 +29,7 @@ const Footer = () => {
                 <Linkedin size={24} />
               </a>
               <a
-                href="mailto:daniel.aharon@example.com"
+                href="mailto:danielaharon53@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={24} />
