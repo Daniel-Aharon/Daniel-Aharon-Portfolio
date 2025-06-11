@@ -12,19 +12,19 @@ const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center section-padding bg-gradient-to-br from-background via-background to-muted/20 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center section-padding bg-gradient-to-br from-background to-muted relative overflow-hidden">
       <div className="container-custom relative z-10">
         <div className="text-center animate-on-scroll">
           <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-              <span className="gradient-text">Daniel Aharon</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-foreground">
+              Daniel Aharon
             </h1>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground/80 mb-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-accent mb-6">
               DevOps Engineer
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Building scalable cloud infrastructure with automation, monitoring, and security best practices. 
-              Focused on delivering reliable, efficient DevOps solutions.
+              Experienced in automation, cloud infrastructure, and CI/CD implementation. 
+              Specializing in scalable solutions with modern DevOps practices and cloud-native technologies.
             </p>
           </div>
 
@@ -40,19 +40,19 @@ const Hero = () => {
 
           <div className="flex justify-center gap-6 mb-12">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-               className="p-3 bg-card/50 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110">
+               className="p-3 bg-card rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300">
               <Github className="w-6 h-6" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-               className="p-3 bg-card/50 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110">
+               className="p-3 bg-card rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300">
               <Linkedin className="w-6 h-6" />
             </a>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             {techIcons.map((tech, index) => (
-              <div key={index} className="flex items-center gap-2 bg-card/50 px-4 py-2 rounded-full border border-border/50 hover:bg-card transition-all duration-300 hover:scale-105">
-                <span className="text-2xl">{tech.icon}</span>
+              <div key={index} className="flex items-center gap-2 bg-card px-4 py-2 rounded-lg border border-border hover:border-accent/50 transition-all duration-300">
+                <span className="text-xl">{tech.icon}</span>
                 <span className="text-sm font-medium text-muted-foreground">{tech.name}</span>
               </div>
             ))}
@@ -60,10 +60,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Background decoration */}
+      {/* Subtle background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
       </div>
     </section>
   );
