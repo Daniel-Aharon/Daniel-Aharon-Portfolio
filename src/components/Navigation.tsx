@@ -27,18 +27,18 @@ const Navigation = () => {
       isScrolled ? 'bg-background/95 backdrop-blur-sm border-b border-border' : 'bg-transparent'
     }`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-xl font-bold gradient-text">
+        <div className="flex items-center justify-between h-20">
+          <a href="#" className="text-xl font-medium text-foreground tracking-wide">
             Daniel Aharon
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-12">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium tracking-wide text-sm uppercase"
               >
                 {item.label}
               </a>
@@ -50,18 +50,18 @@ const Navigation = () => {
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-sm">
+          <div className="md:hidden py-6 border-t border-border bg-background/95 backdrop-blur-sm">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="block py-2 text-foreground/80 hover:text-primary transition-colors duration-300 font-medium"
+                className="block py-3 text-muted-foreground hover:text-foreground transition-colors duration-300 font-medium tracking-wide text-sm uppercase"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}

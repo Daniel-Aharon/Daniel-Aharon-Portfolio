@@ -1,69 +1,62 @@
 
-import { ArrowDown, Github, Linkedin } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
-  const techIcons = [
-    { name: 'AWS', icon: '☁️' },
-    { name: 'Docker', icon: '🐳' },
-    { name: 'Kubernetes', icon: '⚙️' },
-    { name: 'Terraform', icon: '🏗️' },
-    { name: 'Jenkins', icon: '🔄' },
-    { name: 'Python', icon: '🐍' },
+  const techStack = [
+    'AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Python'
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center section-padding bg-background relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center section-padding bg-background relative">
       <div className="container-custom relative z-10">
-        <div className="text-center animate-on-scroll">
-          <div className="mb-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-foreground">
+        <div className="text-center animate-on-scroll max-w-4xl mx-auto">
+          <div className="mb-12">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-normal mb-8 leading-tight text-foreground tracking-tight">
               Daniel Aharon
             </h1>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-accent mb-6">
+            <div className="w-24 h-px bg-foreground mx-auto mb-8"></div>
+            <h2 className="text-2xl md:text-3xl font-normal text-muted-foreground mb-8 tracking-wide">
               DevOps Engineer
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Experienced in automation, cloud infrastructure, and CI/CD implementation. 
-              Specializing in scalable solutions with modern DevOps practices and cloud-native technologies.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed classical-text">
+              Specialized in cloud infrastructure automation, containerization, and scalable deployment solutions. 
+              Building resilient systems with modern DevOps practices.
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <a href="#projects" className="btn-primary">
-              View My Work
+              View Work
               <ArrowDown className="w-4 h-4" />
             </a>
             <a href="#contact" className="btn-secondary">
-              Get In Touch
+              Contact
             </a>
           </div>
 
-          <div className="flex justify-center gap-6 mb-12">
+          <div className="flex justify-center gap-8 mb-16">
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-               className="p-3 bg-card rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300">
-              <Github className="w-6 h-6" />
+               className="p-4 hover:bg-secondary rounded-sm transition-all duration-300 group">
+              <Github className="w-6 h-6 group-hover:text-primary transition-colors" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-               className="p-3 bg-card rounded-full hover:bg-accent hover:text-accent-foreground transition-all duration-300">
-              <Linkedin className="w-6 h-6" />
+               className="p-4 hover:bg-secondary rounded-sm transition-all duration-300 group">
+              <Linkedin className="w-6 h-6 group-hover:text-primary transition-colors" />
+            </a>
+            <a href="mailto:daniel.aharon@example.com"
+               className="p-4 hover:bg-secondary rounded-sm transition-all duration-300 group">
+              <Mail className="w-6 h-6 group-hover:text-primary transition-colors" />
             </a>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            {techIcons.map((tech, index) => (
-              <div key={index} className="flex items-center gap-2 bg-card px-4 py-2 rounded-lg border border-border hover:border-accent transition-all duration-300">
-                <span className="text-xl">{tech.icon}</span>
-                <span className="text-sm font-medium text-muted-foreground">{tech.name}</span>
-              </div>
+          <div className="flex flex-wrap justify-center gap-6">
+            {techStack.map((tech, index) => (
+              <span key={index} className="text-sm font-medium text-muted-foreground border-b border-muted-foreground/30 pb-1 hover:border-foreground hover:text-foreground transition-all duration-300">
+                {tech}
+              </span>
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Subtle background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
       </div>
     </section>
   );
