@@ -1,73 +1,98 @@
-# Welcome to your Lovable project
+# Daniel Aharon - DevOps Portfolio
 
-## Project info
+A professional portfolio website showcasing DevOps engineering expertise and projects. This modern, responsive application demonstrates proficiency in cloud infrastructure, containerization, and CI/CD practices through a carefully crafted user interface and interactive features.
 
-**URL**: https://lovable.dev/projects/a2a49595-477c-4b6b-a62e-0d9eac4a8817
+## Key Features
 
-## How can I edit this code?
+- **Professional Design**: Elegant, responsive layout with optimized user experience
+- **Project Showcase**: Comprehensive presentation of DevOps projects and technical implementations
+- **Interactive Elements**: Smooth animations and responsive interactions
+- **Cross-Platform Compatibility**: Fully responsive design optimized for all devices
+- **Performance Optimization**: Optimized assets and fast loading times
 
-There are several ways of editing your application.
+## Technical Stack
 
-**Use Lovable**
+- **Frontend**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with custom configurations
+- **UI Components**: shadcn/ui component library
+- **Build System**: Vite
+- **Icon System**: Lucide React
+- **Hosting**: AWS S3
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a2a49595-477c-4b6b-a62e-0d9eac4a8817) and start prompting.
+## Project Architecture
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+├── public/              # Static assets
+├── src/
+│   ├── components/      # React components
+│   ├── pages/          # Page components
+│   ├── lib/            # Utility functions
+│   └── styles/         # Global styles
+├── index.html          # Entry HTML file
+└── package.json        # Project dependencies
 ```
 
-**Edit a file directly in GitHub**
+## Development Setup
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- Node.js (v16 or higher)
+- npm or yarn
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Daniel-Aharon/Daniel-Aharon-Porfolio.git
+   cd Daniel-Aharon-Porfolio
+   ```
 
-This project is built with:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## How can I deploy this project?
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/a2a49595-477c-4b6b-a62e-0d9eac4a8817) and click on Share -> Publish.
+## Customization Guide
 
-## Can I connect a custom domain to my Lovable project?
+- **Theme Configuration**: Modify `tailwind.config.js` for styling adjustments
+- **Content Management**: Update project information in `src/components/Projects.tsx`
+- **Asset Management**: Replace images in the `public` directory
+- **Style Modifications**: Edit global styles in `src/index.css`
 
-Yes, you can!
+## Responsive Design Specifications
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- Desktop: 1920px and below
+- Tablet: 1024px and below
+- Mobile: 768px and below
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Development Commands
+
+- Development Server: `npm run dev`
+- Production Build: `npm run build`
+- Build Preview: `npm run preview`
+- Code Linting: `npm run lint`
+
+## License
+
+This project is licensed under the MIT License.
+
+## Professional Contact
+
+- **Name**: Daniel Aharon
+- **Email**: danielaharon53@gmail.com
+- **LinkedIn**: [Daniel Aharon](https://linkedin.com/in/daniel-aharon5)
+- **GitHub**: [Daniel-Aharon](https://github.com/Daniel-Aharon)
+
+---
+
+Developed with React, TypeScript, and Tailwind CSS

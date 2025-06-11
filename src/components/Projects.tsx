@@ -6,7 +6,7 @@ const Projects = () => {
       title: "Chat Bot Application",
       description:
         "A full-stack chat application with a React frontend and FastAPI backend, containerized using Docker. The project features a modern chat interface, real-time messaging via WebSockets, and robust CI/CD with GitHub Actions. Easily deployable with Docker Compose, it demonstrates cloud-native development and infrastructure automation.",
-      image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=600&h=400&fit=crop",
+      image: "/chat_bot_pic.png",
       technologies: [
         "React",
         "FastAPI",
