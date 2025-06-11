@@ -1,79 +1,69 @@
 
-import { ArrowDown, Github } from 'lucide-react';
+import { ArrowDown, Github, Linkedin } from 'lucide-react';
 
 const Hero = () => {
+  const techIcons = [
+    { name: 'AWS', icon: '☁️' },
+    { name: 'Docker', icon: '🐳' },
+    { name: 'Kubernetes', icon: '⚙️' },
+    { name: 'Terraform', icon: '🏗️' },
+    { name: 'Jenkins', icon: '🔄' },
+    { name: 'Python', icon: '🐍' },
+  ];
+
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-devops-dark via-devops-darker to-devops-dark">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMGQ0ZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-40"></div>
-      </div>
-
+    <section className="min-h-screen flex items-center justify-center section-padding bg-gradient-to-br from-background via-background to-muted/20 relative overflow-hidden">
       <div className="container-custom relative z-10">
-        <div className="text-center animate-fade-in">
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary border border-primary/20 rounded-full text-sm font-medium mb-6">
+        <div className="text-center animate-on-scroll">
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+              <span className="gradient-text">Daniel Aharon</span>
+            </h1>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground/80 mb-6">
               DevOps Engineer
-            </span>
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Building scalable cloud infrastructure with automation, monitoring, and security best practices. 
+              Focused on delivering reliable, efficient DevOps solutions.
+            </p>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="block text-white">Daniel</span>
-            <span className="block gradient-text">Aharon</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Building scalable infrastructure and automating deployments with 
-            <span className="text-devops-cyan font-medium"> AWS</span>, 
-            <span className="text-devops-orange font-medium"> Docker</span>, and 
-            <span className="text-devops-purple font-medium"> Terraform</span>
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <a
-              href="#projects"
-              className="btn-primary animate-glow"
-            >
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <a href="#projects" className="btn-primary">
               View My Work
-              <ArrowDown size={20} />
+              <ArrowDown className="w-4 h-4" />
             </a>
-            <a
-              href="https://github.com/Daniel-Aharon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary bg-white/10 text-white border-white/20 hover:bg-white/20"
-            >
-              <Github size={20} />
-              GitHub Profile
+            <a href="#contact" className="btn-secondary">
+              Get In Touch
             </a>
           </div>
 
-          {/* Floating Tech Icons */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-md mx-auto">
-            {[
-              { name: 'AWS', icon: '☁️', delay: '0s' },
-              { name: 'Docker', icon: '🐳', delay: '0.5s' },
-              { name: 'Terraform', icon: '🏗️', delay: '1s' },
-              { name: 'GitHub', icon: '⚡', delay: '1.5s' }
-            ].map((tech, index) => (
-              <div
-                key={tech.name}
-                className="text-center animate-float"
-                style={{ animationDelay: tech.delay }}
-              >
-                <div className="text-3xl mb-2">{tech.icon}</div>
-                <div className="text-sm text-slate-400 font-medium">{tech.name}</div>
+          <div className="flex justify-center gap-6 mb-12">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+               className="p-3 bg-card/50 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110">
+              <Github className="w-6 h-6" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+               className="p-3 bg-card/50 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-110">
+              <Linkedin className="w-6 h-6" />
+            </a>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            {techIcons.map((tech, index) => (
+              <div key={index} className="flex items-center gap-2 bg-card/50 px-4 py-2 rounded-full border border-border/50 hover:bg-card transition-all duration-300 hover:scale-105">
+                <span className="text-2xl">{tech.icon}</span>
+                <span className="text-sm font-medium text-muted-foreground">{tech.name}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="animate-bounce">
-          <ArrowDown className="text-white/60" size={24} />
-        </div>
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
       </div>
     </section>
   );

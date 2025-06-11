@@ -1,107 +1,72 @@
 
+import { Server, Cloud, Code, Settings, GitBranch, Shield } from 'lucide-react';
+
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Cloud Platforms",
-      icon: "☁️",
-      skills: [
-        { name: "AWS", level: 90, icon: "🔶" },
-        { name: "Azure", level: 75, icon: "🔷" },
-        { name: "Google Cloud", level: 70, icon: "🔴" }
-      ]
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Infrastructure",
+      skills: ["AWS EC2", "S3", "VPC", "IAM", "CloudFormation", "Lambda"]
     },
     {
+      icon: <Server className="w-8 h-8" />,
       title: "Containerization",
-      icon: "📦",
-      skills: [
-        { name: "Docker", level: 95, icon: "🐳" },
-        { name: "Kubernetes", level: 85, icon: "⚙️" },
-        { name: "Docker Compose", level: 90, icon: "🔧" }
-      ]
+      skills: ["Docker", "Kubernetes", "Container Orchestration", "Helm Charts"]
     },
     {
+      icon: <GitBranch className="w-8 h-8" />,
+      title: "CI/CD & Automation",
+      skills: ["Jenkins", "GitHub Actions", "Pipeline Automation", "Build Management"]
+    },
+    {
+      icon: <Code className="w-8 h-8" />,
       title: "Infrastructure as Code",
-      icon: "🏗️",
-      skills: [
-        { name: "Terraform", level: 90, icon: "🌍" },
-        { name: "CloudFormation", level: 80, icon: "📋" },
-        { name: "Ansible", level: 75, icon: "🔴" }
-      ]
+      skills: ["Terraform", "Ansible", "Configuration Management", "Resource Provisioning"]
     },
     {
-      title: "CI/CD & Monitoring",
-      icon: "🔄",
-      skills: [
-        { name: "GitHub Actions", level: 90, icon: "⚡" },
-        { name: "Jenkins", level: 80, icon: "🔧" },
-        { name: "Prometheus", level: 85, icon: "📊" }
-      ]
+      icon: <Settings className="w-8 h-8" />,
+      title: "Scripting & Development",
+      skills: ["Python", "Bash", "PowerShell", "REST APIs"]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Monitoring & Security",
+      skills: ["CloudWatch", "Prometheus", "Security Best Practices", "Log Management"]
     }
   ];
 
   return (
-    <section id="skills" className="section-padding bg-muted/30">
+    <section id="skills" className="section-padding bg-muted/50">
       <div className="container-custom">
         <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Technical <span className="gradient-text">Skills</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit for building, deploying, and maintaining modern infrastructure
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Core competencies in modern DevOps practices and cloud technologies
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <div
-              key={category.title}
-              className="tech-card animate-on-scroll"
-              style={{ animationDelay: `${categoryIndex * 0.1}s` }}
-            >
-              <div className="text-center mb-6">
-                <div className="text-3xl mb-3">{category.icon}</div>
-                <h3 className="text-xl font-semibold text-foreground">{category.title}</h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {skillCategories.map((category, index) => (
+            <div key={index} className="tech-card animate-on-scroll group">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="p-3 bg-primary/10 rounded-lg text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-semibold">{category.title}</h3>
               </div>
-
-              <div className="space-y-4">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <span className="text-lg">{skill.icon}</span>
-                        <span className="font-medium text-foreground">{skill.name}</span>
-                      </div>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-secondary rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-primary to-accent h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
+              
+              <div className="space-y-3">
+                {category.skills.map((skill, skillIndex) => (
+                  <div key={skillIndex} className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-muted-foreground">{skill}</span>
                   </div>
                 ))}
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Certifications */}
-        <div className="mt-16 animate-on-scroll">
-          <h3 className="text-2xl font-bold text-center mb-8">Certifications & Learning Path</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { name: "AWS Solutions Architect", status: "In Progress", icon: "🏆" },
-              { name: "Terraform Associate", status: "Planned", icon: "📜" },
-              { name: "CKA (Kubernetes)", status: "Studying", icon: "⚡" }
-            ].map((cert) => (
-              <div key={cert.name} className="bg-card p-6 rounded-lg border border-border text-center">
-                <div className="text-2xl mb-2">{cert.icon}</div>
-                <h4 className="font-semibold mb-1">{cert.name}</h4>
-                <span className="text-sm text-primary font-medium">{cert.status}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

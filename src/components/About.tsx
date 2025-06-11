@@ -11,32 +11,31 @@ const About = () => {
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate DevOps engineer with a strong foundation in cloud infrastructure, 
-                automation, and continuous integration/deployment. My journey in technology began 
-                with a curiosity about how systems work together to deliver seamless user experiences.
+                DevOps Engineer with practical knowledge in automation and cloud infrastructure. 
+                Proficient in Docker, Kubernetes, and CI/CD implementation with Jenkins, 
+                complemented by Python and Bash scripting capabilities.
               </p>
               
               <p>
-                Currently specializing in AWS cloud services, I design and implement scalable 
-                infrastructure solutions using Infrastructure as Code principles. I'm particularly 
-                enthusiastic about container orchestration, monitoring solutions, and security best practices.
+                Familiar with Infrastructure as Code using Terraform and Ansible for AWS 
+                resource management. Committed to continuous learning and building scalable, 
+                resilient infrastructure in collaborative environments.
               </p>
               
               <p>
-                When I'm not optimizing CI/CD pipelines or troubleshooting distributed systems, 
-                you'll find me exploring new technologies, contributing to open-source projects, 
-                or sharing knowledge with the DevOps community.
+                Focused on implementing best practices for monitoring, security, and deployment 
+                automation while maintaining system reliability and performance optimization.
               </p>
             </div>
 
             <div className="mt-8 grid grid-cols-2 gap-6">
               <div className="bg-card/50 p-4 rounded-lg border border-border/50">
-                <div className="text-2xl font-bold text-primary mb-1">3+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-2xl font-bold text-primary mb-1">AWS</div>
+                <div className="text-sm text-muted-foreground">Cloud Platform</div>
               </div>
               <div className="bg-card/50 p-4 rounded-lg border border-border/50">
-                <div className="text-2xl font-bold text-primary mb-1">15+</div>
-                <div className="text-sm text-muted-foreground">Projects Completed</div>
+                <div className="text-2xl font-bold text-primary mb-1">IaC</div>
+                <div className="text-sm text-muted-foreground">Terraform & Ansible</div>
               </div>
             </div>
           </div>
@@ -51,7 +50,7 @@ const About = () => {
                 />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground p-4 rounded-full shadow-lg">
-                <span className="text-2xl">☁️</span>
+                <span className="text-2xl">⚡</span>
               </div>
             </div>
           </div>
