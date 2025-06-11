@@ -107,7 +107,7 @@
   }
 
   .project-card {
-    @apply bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/20 transition-all duration-500 group;
+    @apply bg-card border border-border rounded-xl overflow-hidden hover:shadow-xl hover:shadow-primary/20 transition-all duration-500;
   }
 
   .gradient-text {
