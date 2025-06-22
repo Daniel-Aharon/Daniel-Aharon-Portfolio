@@ -2,7 +2,7 @@ import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   const techStack = [
-    'AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Python'
+    'AWS', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions', 'Python'
   ];
 
   return (
