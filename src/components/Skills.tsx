@@ -31,7 +31,7 @@ const Skills = () => {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Monitoring & Security",
-      skills: ["CloudWatch", "Prometheus", "Security Best Practices", "Log Management"]
+      skills: ["CloudWatch", "Prometheus & Grafana", "Security Best Practices", "Log Management"]
     }
   ];
 
