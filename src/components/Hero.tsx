@@ -31,7 +31,7 @@ const Hero = () => {
             <a href="#contact" className="btn-secondary">
               Contact
             </a>
-            <a href="/Danie_Aharon_Resume.pdf" download className="btn-secondary">
+            <a href="/Daniel_Aharon_Resume.pdf" download className="btn-secondary">
               Download CV
             </a>
           </div>
