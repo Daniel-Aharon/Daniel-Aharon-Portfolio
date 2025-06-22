@@ -1,98 +1,123 @@
 # Daniel Aharon - DevOps Portfolio
 
-A professional portfolio website showcasing DevOps engineering expertise and projects. This modern, responsive application demonstrates proficiency in cloud infrastructure, containerization, and CI/CD practices through a carefully crafted user interface and interactive features.
+A modern, responsive portfolio website showcasing DevOps expertise and professional projects. Built with React, TypeScript, and deployed on AWS.
 
-## Key Features
+## 🌐 Live Site
 
-- **Professional Design**: Elegant, responsive layout with optimized user experience
-- **Project Showcase**: Comprehensive presentation of DevOps projects and technical implementations
-- **Interactive Elements**: Smooth animations and responsive interactions
-- **Cross-Platform Compatibility**: Fully responsive design optimized for all devices
-- **Performance Optimization**: Optimized assets and fast loading times
+**[danielaharon.site](https://danielaharon.site)**
 
-## Technical Stack
+## 🚀 Features
 
-- **Frontend**: React 18 with TypeScript
-- **Styling**: Tailwind CSS with custom configurations
-- **UI Components**: shadcn/ui component library
-- **Build System**: Vite
-- **Icon System**: Lucide React
-- **Hosting**: AWS S3
+- **Modern Design**: Clean, professional interface with smooth animations
+- **Responsive**: Optimized for all devices and screen sizes
+- **Fast Performance**: Built with Vite for optimal loading speeds
+- **Automated Deployment**: CI/CD pipeline with GitHub Actions
+- **CDN Delivery**: Global content delivery via CloudFront
 
-## Project Architecture
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS, Shadcn/ui components
+- **Deployment**: AWS S3, CloudFront, GitHub Actions
+- **Domain**: Custom domain with SSL certificate
+
+## 📁 Project Structure
 
 ```
-├── public/              # Static assets
-├── src/
-│   ├── components/      # React components
-│   ├── pages/          # Page components
-│   ├── lib/            # Utility functions
-│   └── styles/         # Global styles
-├── index.html          # Entry HTML file
-└── package.json        # Project dependencies
+src/
+├── components/          # React components
+│   ├── Hero.tsx        # Hero section
+│   ├── About.tsx       # About section
+│   ├── Skills.tsx      # Skills showcase
+│   ├── Projects.tsx    # Project portfolio
+│   ├── Certificates.tsx # Professional certifications
+│   ├── Contact.tsx     # Contact form
+│   ├── Navigation.tsx  # Navigation menu
+│   └── Footer.tsx      # Footer section
+├── pages/              # Page components
+└── index.css           # Global styles
+
+.github/workflows/      # GitHub Actions deployment
+public/                 # Static assets
 ```
 
-## Development Setup
+## 🚀 Getting Started
 
 ### Prerequisites
-
-- Node.js (v16 or higher)
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/Daniel-Aharon/Daniel-Aharon-Porfolio.git
-   cd Daniel-Aharon-Porfolio
+   git clone https://github.com/Daniel-Aharon/Daniel-Aharon-Portfolio.git
+   cd Daniel-Aharon-Portfolio
    ```
 
-2. Install dependencies:
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. Start the development server:
+3. **Start development server**
    ```bash
    npm run dev
    ```
 
-4. Build for production:
-   ```bash
-   npm run build
-   ```
+4. **Open your browser**
+   Navigate to `http://localhost:8080`
 
-## Customization Guide
+### Available Scripts
 
-- **Theme Configuration**: Modify `tailwind.config.js` for styling adjustments
-- **Content Management**: Update project information in `src/components/Projects.tsx`
-- **Asset Management**: Replace images in the `public` directory
-- **Style Modifications**: Edit global styles in `src/index.css`
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
 
-## Responsive Design Specifications
+## 🏗️ Deployment
 
-- Desktop: 1920px and below
-- Tablet: 1024px and below
-- Mobile: 768px and below
+The project uses GitHub Actions for automated deployment:
 
-## Development Commands
+1. **Push to main branch**
+2. **GitHub Actions automatically:**
+   - Installs dependencies
+   - Builds the project
+   - Deploys to S3
+   - Invalidates CloudFront cache
 
-- Development Server: `npm run dev`
-- Production Build: `npm run build`
-- Build Preview: `npm run preview`
-- Code Linting: `npm run lint`
+### Required GitHub Secrets
 
-## License
+- `AWS_ACCESS_KEY_ID` - Your AWS access key
+- `AWS_SECRET_ACCESS_KEY` - Your AWS secret key
+- `AWS_REGION` - Your AWS region
+- `S3_BUCKET_NAME` - Your S3 bucket name
+- `CLOUDFRONT_DISTRIBUTION_ID` - Your CloudFront distribution ID
+
+## 🎨 Design
+
+- **Color Palette**: DevOps-themed colors (blue, cyan, purple, orange)
+- **Typography**: Classical serif fonts for professional appearance
+- **Animations**: Smooth scroll animations and hover effects
+- **Responsive**: Mobile-first design approach
+
+## 📱 Responsive Design
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+## 👨‍💻 Author
+
+**Daniel Aharon**
+- **Email**: danielaharon53@gmail.com
+- **LinkedIn**: [Daniel Aharon](https://linkedin.com/in/daniel-aharon5)
+- **GitHub**: [@Daniel-Aharon](https://github.com/Daniel-Aharon)
+
+## 📄 License
 
 This project is licensed under the MIT License.
 
-## Professional Contact
-
-- **Name**: Daniel Aharon
-- **Email**: danielaharon53@gmail.com
-- **LinkedIn**: [Daniel Aharon](https://linkedin.com/in/daniel-aharon5)
-- **GitHub**: [Daniel-Aharon](https://github.com/Daniel-Aharon)
-
 ---
 
-Developed with React, TypeScript, and Tailwind CSS
+Built with React, TypeScript, and Tailwind CSS
