@@ -8,7 +8,7 @@ const Certificates = () => {
         "AWS Certified Solutions Architect - Associate level certification demonstrating expertise in designing distributed systems on AWS. Covers architectural best practices, security, reliability, performance efficiency, cost optimization, and operational excellence.",
       image: "https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
       issuer: "Amazon Web Services",
-      issueDate: "2024",
+      issueDate: "2025",
       credentialUrl: "https://www.credly.com/badges/654fa071-ca08-4f26-9473-2abf58642496/public_url",
       category: "Cloud Computing"
     }
