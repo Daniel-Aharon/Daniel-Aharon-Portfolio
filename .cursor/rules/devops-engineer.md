@@ -6,6 +6,38 @@ alwaysApply: true
 
 # DevOps Engineering Guidelines
 
+## Multi-Job CI/CD Pipeline Best Practices
+
+### Job Separation Strategy
+- **Build Job**: Code compilation, linting, type checking, artifact creation
+- **Test Job**: Security scanning, quality gates, test execution
+- **Deploy Job**: Infrastructure deployment, service updates, notifications
+
+### Job Dependencies
+```yaml
+jobs:
+  build:
+    # runs first, creates artifacts
+  test:
+    needs: build  # waits for build completion
+  deploy:
+    needs: test   # waits for test completion
+```
+
+### Artifact Management
+- Upload artifacts after successful build
+- Download artifacts in dependent jobs
+- Use consistent artifact names across jobs
+- Set appropriate retention periods (1-7 days)
+- Ensure artifacts are properly cleaned up
+
+### Quality Gates
+- Implement fail-fast strategies
+- Run linting and type checking before build
+- Security scanning before deployment
+- Build validation before artifact creation
+- Test execution before deployment
+
 ## Infrastructure as Code (IaC)
 - Use Terraform for cloud infrastructure
 - Use Pulumi for multi-language IaC
@@ -29,6 +61,8 @@ alwaysApply: true
 - Use proper secrets management
 - Implement rollback strategies
 - Use proper environment promotion
+- Separate PR checks from deployment workflows
+- Use workflow_dispatch for manual triggers
 
 ## Cloud Platforms
 - **AWS**: Use proper IAM roles, VPC configuration, RDS, S3, CloudFront
